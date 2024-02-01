@@ -1,0 +1,56 @@
+# Version Control
+-> helps to change the version of the project
+-> can go far back or far forward based on the version you want
+-> version are simply the save-points of project
+
+# Git
+
+1. cd -> change directory(folder)
+2. mkdir -> make directory
+3. touch -> create a new file
+         -> e.g. touch file_name.txt
+4. start -> open a file
+         -> e.g. start file_name.txt
+5. vim -> terminal based editor -> type ":q!" to exit vim editor
+
+6. git init -> initialize git repository
+
+[staging-area: intermediate place where we can pick and choose which file in our working directory that we
+                want to commit]
+
+7. git status -> see what's inside the staging area
+              -> untracked files are shown in red which is something in the working directory but not in staging area
+
+8. git add <file_name_with_extension> -> add a file to the staging area as new file
+                         -> file name in green
+                         -> ready to be committed
+
+9. git commit -m "message" -> add a commit message
+                    -> keep tracks of what changes you have made in each commit
+                    -> what changes where made between the last save point and the new one
+                    -> usually messages are written in present tense
+                    -> so by convention use present tense(Best Practise)
+
+10. git log -> see what commit you have made and when
+            -> has "hash" which uniquely identifies the commits
+
+11. git add . -> add everything inside the current directory to the staging area
+
+12. git diff <file_name> -> checks what are the difference between current version and the last saved point
+                         -> e.g. git diff chapter3.txt
+
+12. git checkout <file_name> -> roll back current version to the last version that was committed in the local repository
+
+# Working Directory:
+-> folder where we initialize our git repository
+-> where we use "git init"
+
+# Staging Area:
+-> good place to try and figure out what are the things that we want git to ignore and what are the things to be tracked
+-> "git add" puts our file to the staging area
+
+# Local Repository:
+-> local repository is ".git"
+-> version is given a name through commit message
+-> even if we messed up our file we can still use the last version that's under version control and we can use special
+    command called "git checkout" to revert back or roll back to the last position in our local repository
